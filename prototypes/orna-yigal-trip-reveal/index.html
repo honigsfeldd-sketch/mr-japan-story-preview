@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <!-- Run as a standalone web app when added to the iOS home screen
+       (no Safari URL bar, no bottom toolbar). Status bar floats over
+       the hero photo with white text — matches the closed Stories feel. -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="סיפור הטיול">
+  <meta name="theme-color" content="#ebe6dd">
+  <title>מר יפן — ספריית היעדים</title>
+  <link rel="stylesheet" href="styles.css?v=20260802-apple-motion-pass-v1">
+</head>
+<body>
+  <main class="stage" id="stage" data-flow="app">
+    <div class="app-shell" id="app-shell">
+      <section class="app-screen" aria-label="מסלול הטיול">
+        <div class="app-status-bar" aria-hidden="true">
+          <span class="app-status-time">9:41</span>
+          <span class="app-status-icons">
+            <span class="app-signal"></span>
+            <span class="app-wifi"></span>
+            <span class="app-battery"></span>
+          </span>
+        </div>
+
+        <header class="app-header">
+          <div class="app-title-pill">מסלול הטיול 📍️</div>
+        </header>
+
+        <div class="trip-controls">
+          <div class="map-toggle">הצג על מפה | הצג כרשימה</div>
+          <button class="trip-story-button" id="open-reveal" type="button" aria-label="פתיחת סיפור הטיול">
+            <img src="assets/app/trip-story-thumb.png" alt="">
+          </button>
+        </div>
+        <div class="route-grid" id="route-grid"></div>
+      </section>
+    </div>
+
+    <div class="screen-shell story-shell" id="screen-shell">
+      <section class="screen" id="screen" data-state="closed" aria-label="סיפור יעדי הטיול">
+        <div class="closed-view" id="closed-view" aria-hidden="false"></div>
+
+        <div class="open-view" id="open-view" aria-hidden="true">
+          <div class="carousel" id="carousel" aria-live="polite"></div>
+          <ul class="details-list" id="details-list"></ul>
+        </div>
+
+        <div class="identity" id="identity"></div>
+        <div class="status-bar" aria-hidden="true">
+          <span class="status-time">9:41</span>
+          <span class="status-icons">
+            <span class="signal"></span>
+            <span class="wifi"></span>
+            <span class="battery"></span>
+          </span>
+        </div>
+        <button class="exit-button" id="exit-button" type="button" aria-label="חזרה למסלול הטיול">
+          <span></span>
+          <span></span>
+        </button>
+        <div class="progress-bar" id="progress-bar" aria-hidden="true"></div>
+        <button class="guide-button" id="guide-button" type="button" aria-label="פתיחת פרטי היעד">
+          <img src="assets/avatar/avatar.png" alt="">
+        </button>
+        <button class="state-hint" id="state-hint" type="button">לחצו לפתיחה</button>
+      </section>
+    </div>
+  </main>
+
+  <script src="all-destinations.js?v=20260802-library-v1"></script>
+  <script src="script.js?v=20260802-library-v1"></script>
+</body>
+</html>
