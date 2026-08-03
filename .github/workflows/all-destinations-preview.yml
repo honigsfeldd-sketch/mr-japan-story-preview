@@ -31,6 +31,7 @@ jobs:
           mkdir -p _site/prototypes _site/assets _site/japan_trip_images_high_quality_named
           cp -R prototypes/orna-yigal-trip-reveal _site/prototypes/
           cp -R prototypes/culinaryx-presentation _site/prototypes/
+          cp -R prototypes/culinaryx-refined _site/prototypes/
           cp -R assets/hero_images _site/assets/
           cp -R assets/icons _site/assets/
           cp -R japan_trip_images_high_quality_named/. _site/japan_trip_images_high_quality_named/
